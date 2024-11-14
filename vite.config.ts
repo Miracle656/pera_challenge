@@ -4,13 +4,13 @@ import { nodePolyfills } from 'vite-plugin-node-polyfills'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: "/pera_challenge/",
   plugins: [
     react(),
     nodePolyfills({
       include: ['buffer', 'crypto', 'stream', 'util']
     })
   ],
-  base: "/pera_challenge/",
   define: {
     "global" : 'globalThis'
   },
